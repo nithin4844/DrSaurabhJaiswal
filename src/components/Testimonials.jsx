@@ -39,7 +39,7 @@ const REVIEWS = [
 
 function StarRating({ count = 5 }) {
   return (
-    <div style={{ display: 'flex', gap: '3px', marginBottom: '16px' }}>
+    <div style={{ display: 'flex', gap: '3px' }}>
       {Array.from({ length: count }, (_, i) => (
         <i key={i} className="fa-solid fa-star" style={{ color: '#FBBC04', fontSize: '.85rem' }} />
       ))}
@@ -94,13 +94,13 @@ export default function Testimonials() {
   return (
     <section id="stories" className="stories">
       <div className="wrap">
-        <div className={`reveal${inView ? ' in' : ''}`} ref={ref} style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <div className={`reveal${inView ? ' in' : ''}`} ref={ref} style={{ maxWidth: '880px', margin: '0 auto', textAlign: 'center' }}>
           <div className="stories__testi">
             <span className="label label-ink" style={{ marginBottom: '18px', display: 'inline-flex' }}>
               Patient Stories
             </span>
-            <h2 className="display display--lg">
-              Real Results.<br /><em>Real Confidence.</em>
+            <h2 className="display display--md" style={{ marginBottom: '8px' }}>
+              Real Results. <em>Real Confidence.</em>
             </h2>
 
             <div
@@ -114,15 +114,19 @@ export default function Testimonials() {
               >
                 {REVIEWS.map((r, i) => (
                   <div key={i} className="testi__slide">
-                    <GoogleBadge />
-                    <StarRating count={r.stars} />
-                    <span className="testi__quote-icon">"</span>
-                    <p className="testi__text">{r.quote}</p>
-                    <div className="testi__author">
-                      <div className="testi__avatar">{r.initial}</div>
-                      <div>
-                        <p className="testi__author-n">{r.name}</p>
-                        <p className="testi__author-s">{r.treatment}</p>
+                    <div className="testi__card">
+                      <div className="testi__card-hd">
+                        <GoogleBadge />
+                        <StarRating count={r.stars} />
+                      </div>
+                      <i className="fa-solid fa-quote-left testi__quote-icon" aria-hidden="true" />
+                      <p className="testi__text">{r.quote}</p>
+                      <div className="testi__author">
+                        <div className="testi__avatar">{r.initial}</div>
+                        <div>
+                          <p className="testi__author-n">{r.name}</p>
+                          <p className="testi__author-s">{r.treatment}</p>
+                        </div>
                       </div>
                     </div>
                   </div>

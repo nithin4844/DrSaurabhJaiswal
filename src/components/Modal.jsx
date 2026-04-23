@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import Logo from './Logo'
 
 const TREATMENTS = [
   'Medical Dermatology Consultation',
@@ -77,7 +76,6 @@ export default function Modal({ onClose, preset = '' }) {
         {step === 'form' ? (
           <>
             <div className="modal-hd">
-              <div className="logo-bubble" style={{ margin: '0 auto' }}><Logo size={52} /></div>
               <h2>Book a Consultation</h2>
               <p>We'll confirm via WhatsApp within the hour.</p>
             </div>

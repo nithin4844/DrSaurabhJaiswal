@@ -54,25 +54,7 @@ export default function BookCTA({ onBook }) {
               a treatment plan designed specifically for your skin.
             </p>
 
-            <div className="book-cta__info">
-              <div className="book-cta__info-row">
-                <i className="fa-solid fa-location-dot" />
-                <span>
-                  Mano-Laxmi Building, 1st Floor, Opp. Centre Point Hotel,
-                  Above Namkeen Ghar, Central Bazar Road, Ramdaspeth, Nagpur – 440010
-                </span>
-              </div>
-              <div className="book-cta__info-row">
-                <i className="fa-solid fa-phone" />
-                <span>
-                  <a href="tel:+918275757171">+91 82757 57171</a>
-                </span>
-              </div>
-              <div className="book-cta__info-row">
-                <i className="fa-regular fa-clock" />
-                <span>Mon to Sat · 11 AM – 7 PM</span>
-              </div>
-            </div>
+
           </div>
 
           <div className="book-cta__form">
